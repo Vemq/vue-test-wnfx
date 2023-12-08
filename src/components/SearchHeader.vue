@@ -60,22 +60,22 @@ function formSubmitHandler() {
       </div>
 
       <div class="selects">
-        <label class="select-label"
+        <div
           >Categories
           <select :value="searchQueryData.category" name="category">
             <option v-for="category in categories" :key="category" :value="category">
               {{ category }}
             </option>
           </select>
-        </label>
+        </div>
 
-        <label class="select-label"
+        <div
           >Sorting by
           <select :value="searchQueryData.sorting" name="sorting">
             <option>relevance</option>
             <option>newest</option>
           </select>
-        </label>
+        </div>
       </div>
     </form>
   </div>
@@ -132,8 +132,5 @@ select {
   justify-content: center;
   gap: 15px;
   color: var(--text-secondary);
-}
-.select-label {
-  cursor: pointer;
 }
 </style>
