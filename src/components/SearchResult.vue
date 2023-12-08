@@ -30,12 +30,12 @@ watch(
     }
 
     if (
-      ['all', 'art', 'biography', 'computers', 'history', 'medical', 'poetry'].includes(category)
+      !['all', 'art', 'biography', 'computers', 'history', 'medical', 'poetry'].includes(category)
     ) {
       category = 'all'
     }
 
-    if (['relevance', 'newest'].includes(sorting)) {
+    if (!['relevance', 'newest'].includes(sorting)) {
       sorting = 'relevance'
     }
 
